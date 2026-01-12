@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Anandi Special 💖</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Segoe UI, sans-serif;
+ color:white;
+ text-align:center;
+ overflow:hidden;
+ background:#000;
+}
+section{
+ display:none;
+ min-height:100vh;
+ padding-bottom:40px;
+}
+section.active{display:block}
 
+/* buttons */
+button{
+ padding:12px 30px;
+ border:none;
+ border-radius:30px;
+ background:white;
+ font-size:1em;
+ cursor:pointer;
+ margin:10px;
+ font-weight:bold;
+}
+
+/* falling hearts */
+.heart,.emoji{
+ position:fixed;
+ top:-10px;
+ font-size:22px;
+ animation:fall linear infinite;
+}
+@keyframes fall{
+ to{transform:translateY(110vh);}
+}
+
+/* images/video */
+img, video{
+ border-radius:20px;
+ margin:20px auto;
+ display:block;
+ max-width:90%;
+ height:auto;
+}
+
+/* text box */
+.text-box{
+ margin:30px auto;
+ padding:25px;
+ background:rgba(0,0,0,0.85); /* dark bg for readability */
+ border-radius:25px;
+ line-height:1.8;
+ font-size:1.3em; /* bigger font */
+ text-align:left;
+ color:white;
+ max-width:800px;
+}
+h1{
+ margin-top:50px;
+ text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+</style>
+</head>
+<body>
+
+<!-- Voice audio -->
+<audio id="pageVoice" controls loop>
+ <source src="voice.mp3" type="audio/mp3">
+ Your browser does not support the audio element.
+</audio>
+
+<!-- PAGE 1 -->
+<section id="p1" class="active" style="background:linear-gradient(135deg,#ff758c,#ff7eb3)">
+<h1>Pic 1 💖</h1>
+<img src="pic1.jpg" alt="Pic 1">
+<div class="text-box">
+Hey Anandi 💖<br>
+27 January 🎂<br>
+Aaj ka din sirf tere naam ✨
+</div>
+<button onclick="go(2)">Next 💕</button>
+</section>
+
+<!-- PAGE 2 -->
+<section id="p2" style="background:linear-gradient(135deg,#ff9a9e,#fad0c4)">
+<h1>Pic 2 💖</h1>
+<img src="pic2.jpg" alt="Pic 2">
+<div class="text-box">
+Meri pyaari Anandi 💕<br>
+Tu meri life ka sabse bright part hai ✨<br>
+Thank you for being my forever bestie 🫂
+</div>
+<button onclick="go(3)">Next 🎂</button>
+<button onclick="go(1)">Back ⬅️</button>
+</section>
+
+<!-- PAGE 3 -->
+<section id="p3" style="background:radial-gradient(circle,#ffecd2,#fcb69f)">
+<h1>Pic 3 💖</h1>
+<img src="pic3.jpg" alt="Pic 3">
+<div class="text-box">
+Happy Birthday Anandi 🎂<br>
+Tu meri life ka sabse special gift hai 🫂
+</div>
+<div style="font-size:70px;cursor:pointer" onclick="alert('Tight Hug for you 🫂💖')">🎁</div>
+<button onclick="go(4)">Next 🎥</button>
+<button onclick="go(2)">Back ⬅️</button>
+</section>
+
+<!-- PAGE 4 Video Page -->
+<section id="p4" style="background:linear-gradient(135deg,#8EC5FC,#E0C3FC)">
+<h1>Memories Video 🎥</h1>
+<video controls>
+ <source src="video.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+</video>
+<div class="text-box">
+Dosti ke khas pal 💞<br>
+"तेरी मेरी दोस्ती इतनी खास हो,<br>
+कि दुनिया कहे काश ऐसा दोस्त मेरे पास हो।"<br>
+"आसमान से तोड़ कर सितारा दिया है,<br>
+आलम-ए-तन्हाई में एक शरारा दिया है,<br>
+मेरी किस्मत भी नाज करती है मुझपे,<br>
+खुदा ने दोस्त ही इतना प्यारा दिया है।"<br>
+"हम तो तेरी ज़िन्दगी की पहचान बन जायेगे,<br>
+हम तो तेरे लबों की मुस्कान बन जायेगे,<br>
+जो हो तेरा ज़िन्दगी में किसी मुश्किल से सामना,<br>
+हम तो तेरा आसमान बन जायेगे।"
+</div>
+<button onclick="go(5)">Next 💌</button>
+<button onclick="go(3)">Back ⬅️</button>
+</section>
+
+<!-- PAGE 5 -->
+<section id="p5" style="background:linear-gradient(135deg,#fbc2eb,#a6c1ee)">
+<h1>Pic 4 💖</h1>
+<img src="pic4.jpg" alt="Pic 4">
+<div class="text-box">
+Happy Birthday to my amazing bestie! 💕<br>
+You're more than a friend; you're family, a confidante, and my partner-in-crime...<br>
+Love you to the moon and back, beba 🌙💞
+<div style="margin-top:25px;text-align:right">— Your Bestie 💖</div>
+</div>
+<button onclick="go(6)">Next 💖</button>
+<button onclick="go(4)">Back ⬅️</button>
+</section>
+
+<!-- PAGE 6 -->
+<section id="p6" style="background:linear-gradient(135deg,#ff9a9e,#fecfef)">
+<h1>Pic 5 💖</h1>
+<img src="pic5.jpg" alt="Pic 5">
+<div class="text-box">
+Memories, adventures, and laughter with you are priceless 💕
+</div>
+<button onclick="go(7)">Next 💖</button>
+<button onclick="go(5)">Back ⬅️</button>
+</section>
+
+<!-- PAGE 7 -->
+<section id="p7" style="background:linear-gradient(135deg,#a1c4fd,#c2e9fb)">
+<h1>Pic 6 💖</h1>
+<img src="pic6.jpg" alt="Pic 6">
+<div class="text-box">
+You inspire me daily with your strength, kindness, and the beautiful way you move through the world 🌸
+</div>
+<button onclick="go(8)">Next 💖</button>
+<button onclick="go(6)">Back ⬅️</button>
+</section>
+
+<!-- PAGE 8 -->
+<section id="p8" style="background:linear-gradient(135deg,#ff9a9e,#fad0c4)">
+<h1>Pic 7 💖</h1>
+<img src="pic7.jpg" alt="Pic 7">
+<div class="text-box">
+On your special day, I wish you a year ahead filled with everything that brings you pure happiness – peace, adventure, success, and endless love 💖
+</div>
+<button onclick="go(9)">Next 💖</button>
+<button onclick="go(7)">Back ⬅️</button>
+</section>
+
+<!-- PAGE 9 -->
+<section id="p9" style="background:linear-gradient(135deg,#fbc2eb,#a6c1ee)">
+<h1>Pic 8 💖</h1>
+<img src="pic8.jpg" alt="Pic 8">
+<div class="text-box">
+You're my calm in the chaos, my biggest cheerleader, and the person who knows me better than anyone. Thank you for your endless patience, your honest advice, and for always making me laugh 😄
+</div>
+<button onclick="go(10)">Next 💖</button>
+<button onclick="go(8)">Back ⬅️</button>
+</section>
+
+<!-- PAGE 10 -->
+<section id="p10" style="background:linear-gradient(135deg,#8EC5FC,#E0C3FC)">
+<h1>Pic 9 💖</h1>
+<img src="pic9.jpg" alt="Pic 9">
+<div class="text-box">
+Cheers to another year of making terrible decisions together and being the first person I’d save in a zombie apocalypse 🏃💨
+</div>
+<button onclick="go(11)">Next 💖</button>
+<button onclick="go(9)">Back ⬅️</button>
+</section>
+
+<!-- PAGE 11 -->
+<section id="p11" style="background:linear-gradient(135deg,#ff758c,#ff7eb3)">
+<h1>Pic 10 💖</h1>
+<img src="pic10.jpg" alt="Pic 10">
+<div class="text-box">
+🧟‍♂️ URGENT NOTICE! Happy Birthday, Bestie! 🎉<br>
+I was going to get you something amazing… but then I remembered you already have <strong>me</strong> 😌<br>
+Love you always ❤️✨
+</div>
+<button onclick="go(1)">Start Again 🔁</button>
+<button onclick="go(10)">Back ⬅️</button>
+</section>
+
+<script>
+function go(n){
+ document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));
+ document.getElementById("p"+n).classList.add("active");
+ const audio = document.getElementById("pageVoice");
+ audio.play().catch(()=>console.log("Autoplay blocked"));
+}
+setInterval(()=>{
+ let h=document.createElement("div");
+ h.className="heart";
+ h.innerHTML="💖";
+ h.style.left=Math.random()*100+"vw";
+ h.style.animationDuration=(Math.random()*3+2)+"s";
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),5000);
+},300);
+</script>
+</body>
+</html>
